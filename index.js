@@ -17,7 +17,7 @@ const verifyPassword = require('./middleware/verifyPassword.middleware');
 
 
 // middleware 
-const allowedOrigins = ['https://ipchecking-61fd2.web.app/', 'https://ipchecking-61fd2.web.app', , 'https://www.nfcdeck.com', 'http://localhost:5173', 'https://ip-blocking.web.app', 'https://ip-blocking.firebaseapp.com'];
+const allowedOrigins = ['app.searchesforu.com', 'https://app.searchesforu.com', , 'https://app.searchesforu.com/', 'http://localhost:5173', 'https://ip-blocking.web.app', 'https://ip-blocking.firebaseapp.com'];
 const corsOptions = {
   origin: allowedOrigins,
   credentials: true,
