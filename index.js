@@ -16,24 +16,6 @@ const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const verifyPassword = require('./middleware/verifyPassword.middleware');
 
 
-// middleware 
-const allowedOrigins1 = ['app.searchesforu.com', 'https://app.searchesforu.com', , 'https://app.searchesforu.com/', 'http://localhost:5173', 'ipchecking-61fd2.web.app', 'https://ipchecking-61fd2.web.app/', 'ipchecking-61fd2.firebaseapp.com', 'ipchecking-61fd2.firebaseapp.com'];
-const allowedOrigins = ['*'];
-app.options('*', cors(corsOptions));
-const corsOptions = {
-  origin: allowedOrigins,
-  credentials: true,
-  optionSuccessStatus: 200,
-};
-
-app.use((req, res, next) => {
-  if (req.path === '/domain') {
-    cors()(req, res, next);
-  } else {
-    cors(corsOptions)(req, res, next);
-  }
-});
-
 app.use(express.json())
 app.use(morgan('dev'))
 app.use((req, res, next) => {
