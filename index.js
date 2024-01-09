@@ -13,7 +13,7 @@ const settingsCollection = database.collection('settings')
 
 
 app.use(cors({
-  origin: ['https://ipchecking-61fd2.web.app', 'https://ipchecking.vercel.app', 'http://localhost:5173','https://app.searchesforu.com', 'https://api.searchesforu.com' ],
+  origin: ['https://ipchecking-61fd2.web.app', 'https://ipchecking.vercel.app', 'http://localhost:5173','https://app.searchesforu.com', 'https://api.searchesforu.com' ,'https://ipngspl.web.app',`${APPurl}` ],
   credentials: true,
 }));
 
@@ -32,7 +32,7 @@ app.use((req, res, next) => {
 
 
 
-const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.7jpkply.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_Claster}${process.env.DB_Claster}/?retryWrites=true&w=majority`;
 
 
 const client = new MongoClient(uri, {
