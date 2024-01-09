@@ -12,6 +12,13 @@ const ipCollection = database.collection('ip')
 const settingsCollection = database.collection('settings')
 
 
+app.use(cors({
+  origin: ['https://ipchecking-61fd2.web.app', 'https://ipchecking.vercel.app'],
+  credentials: true,
+}));
+
+
+
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const verifyPassword = require('./middleware/verifyPassword.middleware');
 
